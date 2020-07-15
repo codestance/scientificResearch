@@ -10,17 +10,13 @@
     <link rel="canonical" href="http://if.pwr.edu.pl/~zielony/">
     <link rel="stylesheet" href="stylesheets/base.css">
    </head>
-
    <body>
 		<nav>
 			<button id="menu-button" class="menu-button" type="button">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
+				<span></span><span></span><span></span><span></span>
       		</button>
 			<ul class ="menu-list" id="menu">
-				<li><a href=#start>Strona główna</a></li>
+				<li><a href=#home>Strona główna</a></li>
 				<li><a href=#about>O mnie</a></li>
 				<li><a href=#classes>Dydaktyka</a></li>
 				<li><a href=#cooperation>Współpraca</a></li>
@@ -29,25 +25,23 @@
 				<li><a href=#link>Linki</a></li>
 			</ul>				
 		</nav>
-
-   		<main onclick="hideAfter()">
-
-	   		<div id="start">
-				<div class="header">
-					<h1 class="name">dr inż. Eunika Zielony</h1>
+		   <main onclick="hideAfter()">
+			<section id="home">
+				<svg class="bubble" width="276" height="206" viewBox="0 0 276 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="bubble-orange" d="M235.096 155.79C192.574 228.095 151.115 132.714 85.5605 193.097C52.2518 235.018 0.871277 163.443 0.871277 113.104C0.871277 62.7661 55.267 43.1501 109.873 21.959C287.234 -46.8715 309.362 61.822 235.096 155.79Z" fill="#F9C1A6"/>
+				</svg>					
+				<div class="home-img">
+					<div class="home-img__box">
+						<img src="images/eunika_zielony.png" alt="dr inż. Eunika Zielony">
+					</div>
 				</div>
-				<div id="diamonds">
-					<div class="diamond" id="img-diamond"><img src="images/eunika_zielony.png" alt="Eunika Zielony" class="start-image"></div>
-					<div class="diamond menu-diamond" id="menu_1" title="O mnie" onclick="clickDiamond('about')"></div>
-					<div class="diamond menu-diamond" id="menu_2" title="Dydaktyka" onclick="clickDiamond('classes')"></div>
-					<div class="diamond menu-diamond" id="menu_3" title="Praca naukowa" onclick="clickDiamond('science')"></div>
-					<div class="diamond menu-diamond" id="menu_4" title="Linki" onclick="clickDiamond('link')"></div>
-				</div>
-			</div>
+				<div class="home-heading"><h1>dr inż. Eunika Zielony</h1></div>
+			</section>
 
-   			<div class="about_me" id="about">
+   			<section id="about">
    				<div class="about_col">
-   					<div class="section_marker"><div class="section_title, about_title"><h2>O mnie</h2></div></div>
+					   <h2>O mnie</h2>
+   					<p>kim jestem i jak mnie znaleźć</p>
    					<div class="contact">
    						<div>
    							<img src="images/contact/location.png" class="contact_img" alt="adres:">
@@ -78,10 +72,11 @@
 						<span class="dot" onclick="currentSlide(1)"></span>
 					</div>
 				</div>
-   			</div>
+			</section>
 
-   			<div class="lectures" id="classes">
-   				<div class="section_marker"><div class="section_title"><h2>Dydaktyka</h2></div></div>
+   			<section id="classes">
+				   <h2>Dydaktyka</h2>
+				   <p>informacje dla studentów</p>
    				<div class="lectures_content">
    					<a href="http://lpf.wppt.pwr.edu.pl/" target="_blank" class="l-link"><div class="lecture"><p>Laboratorium Podstaw Fizyki</p></div></a>
    					<a href="http://www.if.pwr.wroc.pl/~popko/w4/w4.html" target="_blank" class="l-link"><div class="lecture"><p>Laboratorium Fizyki Przyrządów Półprzewodnikowych</p></div></a>
@@ -89,13 +84,13 @@
    					<div class="lecture"><p>Wykład z Fizyki Przyrządów Półprzewodnikowych</p></div>
    					<a href="informatyka.html" class="l-link"><div class="lecture"><p>Fizyczne podstawy współczesnej informatyki</p></div></a>
 				</div>
-   			</div>
+			</section>
 
-   			<div class="science" id="science">
+   			<section id="science">
    				<div class="section_marker"><h2 class="section_title science_title">Praca naukowa</h2></div>
 
 				<div class="science_el science_el-1" id="cooperation">
-					<div class="subsection"><h3>Współpraca</h3></div>
+					<h3>Instytucje z którymi współpracuję</h3>
 					<div class="cooperation_columns">
 						<a target="_blank" href="http://www.ifpan.edu.pl/" class="link_a">	
 							<div class="cooperation_company ifpan" title="Instytut Fizyki Polskiej Akademii Nauk">
@@ -122,11 +117,12 @@
 								<p class="company invisible">Instytut Wysokich Ciśnień UNIPRESS, Warszawa</p>
 							</div>
 						</a>
+						<p>Zapraszam do współpracy - wyślij wiadomość</p>
 					</div>
 				</div>
 
 				<div class="science_el" id="projects">
-					<div class="subsection"><h3>Projekty</h3></div>
+					<h3>Projekty w których brałam udział</h3>
 					<div class="projects_columns">
 						<div class="project" onclick="projectDetails('pr0')">
    								<p class="project_title visible" id= "pr0" >„Własności elektro-optyczne defektów w warstwach ZnO otrzymanych metodą LT ALD”</p>
@@ -172,7 +168,7 @@
 				</div>
 
    				<div class="science_el" id="articles">
-   					<div class="subsection"><h3>Wybrane publikacje</h3></div>
+   					<h3>Wybrane publikacje</h3>
    					<div class="articles_columns">
    						<div class="article">
    								<p class="article_p">
@@ -213,10 +209,10 @@
 						</div>
    					</div>
    				</div>
-   			</div>
+			</section>
    			
    			<div class="links" id="link">
-   				<div class="section_marker"><div class="section_title"><h2>Linki</h2></div></div>
+   				<div class="section_marker"><div class="section_title"><h2>Przydatne linki</h2></div></div>
    				<div class="links_columns">
    					<div class="link_div">
    						<a target="_blank" href="http://www.leps.pwr.edu.pl/" class="link_a">
@@ -241,9 +237,10 @@
 				</div>	
    			</div>
 
-   		</main>
-
+		   </main>
+		<script src="js/anime.min.js"></script>
+		<script src="js/homeAnimations.js"></script>
    		<script src="js/javascript.js"></script>
-
+		
    	</body>
 </html>

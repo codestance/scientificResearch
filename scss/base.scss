@@ -1,21 +1,19 @@
 @import '_reset';
 @import '_variables';
-@import '_mixins';
+// @import '_mixins';
 @import '_menu';
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 html,body {
 	font-family:'Arima Madurai';
 	scroll-behavior: smooth;
-}
-
-.h{
-	display: inline-block;
-	margin: 0;
-	color: $white;	
+	font-size: 16px;
+	@media(min-size: $tablet){
+		font-size: 18px;
+	}
 }
 h1{
-	@extend .h;
 	font-size: 3rem;
 	@media(max-width: $landscape){
 		font-size: 2.1rem;
@@ -25,7 +23,6 @@ h1{
 	}
 }
 h2{
-	@extend .h;
 	font-size: 2rem;
 	@media(max-width: $tablet){
 		font-size: 1.8rem;
@@ -35,7 +32,6 @@ h2{
 	}
 }
 h3{
-	@extend .h;
 	font-size: 1.8rem;
 	@media(max-width: $tablet){
 		font-size: 1.5rem;
@@ -46,22 +42,14 @@ h3{
 }
 
 a{
-	color: $white;
+	color: white;
 	&:hover, &:focus{
-			color: $light-grey;
+			// color: $light-grey;
 		}
 }
 
 p{
-	margin: 0;
-	color: $dark-grey;
-}
-
-.italic{
-	font-style: italic;
-}
-.bold{
-	font-weight: bold;
+	color: $third;
 }
 
 img{
@@ -69,140 +57,89 @@ img{
 	max-width: 100%;
     height: auto;
 }
-
-.menu-button_span{
-	background-color: $mango;
+main{
+	position: relative;
 }
-
-.menu-list{
-	background-color: $green;
+//---bubbles
+.bubble{
+	position: absolute;
+	z-index: -1;
+	&:first-child{
+		top: -1em;
+		left: -1em;
+	}
+}
+.bubble-orange{
+	overflow: hidden;
 }
 
 // - - - S T A R T - - -
-#start {
+section{
 	width: 100%;
-	height: 700px;
-	border: 10px;
-	@include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
-  	// clip-path: url("#swg_d");
-	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/las.jpg);
-	background-size: cover;
-	background-attachment: fixed;
+}
+#home {
+	min-height: 100vh;
 	position: relative;
-	@media(max-width: $tablet){
-		height: 600px;
-	}
-	@media(max-width: $landscape){
-		height: 500px;
-	}
-	@media(max-width: $phone){
-		height: 450px;
-	}
+	z-index: -2;
+	background: $secondary;
+	padding: 1em;
+	// background: #f9f9f9;
+	// background: url('../images/2725746\ —\ kopia.jpg'), $secondary no-repeat;
+	// background: url('../images/3915228.jpg') no-repeat;
+	// background: url('../images/2725746.jpg') no-repeat;
+	// background-size: cover;
+	display: flex;
+	flex-direction: column;
 }
-
-.header {
-	width: 100%;
-	height: 100px;
+.home-img{
+	margin: 0 auto;
+}
+.home-img__border{
 	position: absolute;
-	text-align: center;
-	bottom: 100px;
-	@media(max-width: $tablet){
-		bottom: 50px;
-	}
-	@media(max-width: $phone){
-		bottom: 30px;
-	}
-}
-
-#diamonds{
+	content: "";
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	padding-bottom: 200px;
+	border-color: white;
+	border-style: solid;
 }
-.diamond {
-	transform: rotate(45deg);
-	background: rgba($white,.1);
-	border: 5px solid $white;
-	position: absolute;
-	text-align: center;
-	vertical-align: middle;
-	@include flexible(column,nowrap);
-	// @include align-content(space-around);
-    // @include justify-content(center);
-    cursor: default;
-}
-.start-link {
-	color: $white;
-}
-.menu-diamond{
-	width: 100px;
-	height: 100px;
-	cursor: pointer;
-	overflow: hidden;
-	@include transition(0.6s);
-	@media(max-width: $tablet){
-		width: 80px;
-		height: 80px;
-	}
-	@media(max-width: $landscape){
-		width: 60px;
-		height: 60px;
-	}
-	@media(max-width: $phone){
-		width: 40px;
-		height: 40px;
-	}
-}
-
-#menu_1{
-	@include background(url(../images/woman.png));
-}
-#menu_2{
-	@include background(url(../images/education.png));
-}
-#menu_3{
-	@include background(url(../images/science.png));
-}
-#menu_4{
-	@include background(url(../images/link.png));
-}
-
-#img-diamond {
-	width: 300px;
-	height: 300px;
-	overflow: hidden;
-	@media(max-width: $tablet){
-		width: 230px;
-		height: 230px;
-	}
-	@media(max-width: $landscape){
-		width: 170px;
-		height: 170px;
-	}
-}
-.start-image{
-	max-width: 300px;
-	width: 100%;
-	height: auto;
+.home-img__box{
 	position: relative;
-   	top: 15px;
-    left: 15px;
-	vertical-align: middle;
-	transform: rotate(-45deg);
+	width: 18em;
+	z-index: 1;
+	&::before{
+		@extend .home-img__border;
+		border-width: 0 0 1.5em 1.5em;
+		overflow: hidden;
+	}
+	&::after{
+		@extend .home-img__border;
+		border-width: 1.5em 1.5em 0 0;
+		z-index: -1;
+	}
+	img{
+		width: 100%;
+	}
 }
-
+.home-heading{
+	text-align: center;
+	h1{
+		color: white;
+	}
+}
 // - - - S E C T I O N S - - -
 .section_marker{
  	position: absolute;
  	right: 0;
  	margin-top: 20px;
  	width: 100%;
- 	@include flexible(column,nowrap);
+ 	// @include flexible(column,nowrap);
  	// @include align-items(flex-end);
 }
 .section_title{
 	width: 230px;
-	background-color: $mango;
+	background-color: $third;
 	float: right;
 	padding-left: 5px;
 	@media(max-width: $tablet){
@@ -217,11 +154,11 @@ img{
 .about_me{
 	width: 100%;
 	height: 500px;
-	@include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
+	// @include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
  	// clip-path: url("#swg_d");
  	@media(max-width: $landscape){
  		height: 600px;
- 		@include clip-path(none);
+ 		// @include clip-path(none);
  	}
 }
 .me_slides{
@@ -282,7 +219,7 @@ img{
 	background-color: $light-grey;
 	transform: rotate(45deg);
 	display: inline-block;
-	@include bg-trans(background-color 0.6s);
+	// @include bg-trans(background-color 0.6s);
 	&:hover, .active{
 		background-color: $grey;
 	}
@@ -293,8 +230,8 @@ img{
 	width: 300px;
 	height: 500px;
 	right: 0;
-	background-color: $green;
-	@include clip-path(polygon(15% 0, 100% 0, 100% 100%, 0 100%));
+	background-color: $primary;
+	// @include clip-path(polygon(15% 0, 100% 0, 100% 100%, 0 100%));
   	// clip-path: url("#swg_s");
 	@media(max-width: $tablet){
 		width:250px;
@@ -303,7 +240,7 @@ img{
 		height:auto;
 		min-height: 160px;
 		width: 100%;
-		@include clip-path(polygon(0 45%, 100% 0, 100% 100%, 0 100%));
+		// @include clip-path(polygon(0 45%, 100% 0, 100% 100%, 0 100%));
 	}
 }
 .about_title{
@@ -321,7 +258,7 @@ img{
     margin: 300px 10px 10px 0;
     font-size: 1.2rem;
     float: right;
-    color: $white;
+    color: white;
     	a{
     		padding-left: 5px;
     	}
@@ -359,10 +296,10 @@ img{
 .lectures{
 	width: 100%;
 	height: 600px;
-	background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures.jpeg);
+	// background-image: linear-gradient(90deg,$pink,$light-green),url(../images/lectures.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
-	@include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
+	// @include clip-path(polygon(0 0, 100% 0, 100% 85%, 0 100%));
 	// clip-path: url("#swg_d");
 	z-index: -100;
 	@media(max-width: $phone){
@@ -372,11 +309,11 @@ img{
 .lectures_content{
 	width: 100%;
 	height: 100%;
-	@include flexible(row, wrap);
+	// @include flexible(row, wrap);
 	// @include justify-content(center);
 	float: left;
 	padding: 100px 10px 90px 50px;
-	color: $white;
+	color: white;
 	@media(max-width: $phone){
 		    padding: 80px 10px 90px 50px;
 	}
@@ -393,15 +330,15 @@ img{
 	}
 }
 .lecture {
-	@include flexible(column, nowrap);
+	// @include flexible(column, nowrap);
     // @include justify-content(center);
 	width: 200px;
 	height: 150px;
-	border: 1px $white solid;
+	border: 1px white solid;
 	text-align: center;
 	padding: 5px;
 	margin: 10px;
-	background: rgba($white,.1);
+	background: rgba(white,.1);
 	@media(max-width: $tablet){
 		width: 170px;
 		height: 120px;
@@ -414,7 +351,7 @@ img{
 }
 .lecture p{
 	font-size: 1.2rem;
-	color: $white;
+	color: white;
 	@media(max-width: $tablet){
 		font-size: 16px;
 	}
@@ -446,20 +383,20 @@ img{
 	float: left;
 	padding-left: 10px;
 	h3{
-		color: $green;
+		// color: $green;
 	}
 }
 
 // - - - C O O P E R A T I O N - - -
 .cooperation_columns{
-	@include flexible(row, wrap);
+	// @include flexible(row, wrap);
 	// @include justify-content(center);
 	clear: both;
 }
 .cooperation_company{
 	width: 150px;
 	height: 150px;
-	border: 1px $pink solid;
+	// border: 1px $pink solid;
 	text-align: center;
 	vertical-align: middle;
 	float: left;
@@ -500,7 +437,7 @@ img{
 
 // - - - P R O J E C T S - - - 
 .projects_columns{
-	@include flexible(row, wrap);
+	// @include flexible(row, wrap);
 	// @include justify-content(center);
 	clear: both;
 }
@@ -508,16 +445,16 @@ img{
 .project{
 	width: 300px;
 	height: 200px;
-	@include flexible(column, nowrap);
+	// @include flexible(column, nowrap);
     // @include justify-content(center);
-	border: 1px $pink solid;
+	// border: 1px $pink solid;
 	text-align: center;
 	float: left;
 	margin: 20px;
 	cursor: pointer;
-	background: rgba($white,.4);
+	background: rgba(white,.4);
 	&:hover{
-		background: linear-gradient(90deg,$pink,$light-green);
+		// background: linear-gradient(90deg,$pink,$light-green);
 	}
 	@media(max-width: $tablet){
 		width: 250px;
@@ -549,15 +486,15 @@ img{
 
 // - - - A R T I C L E S - - -
 .articles_columns{
-	@include flexible(column, nowrap);
+	// @include flexible(column, nowrap);
 	clear: both;
 }
 .article{
-	@include columns(2, 300px, 2em);
-	border: 1px $pink solid;
+	// @include columns(2, 300px, 2em);
+	// border: 1px $pink solid;
 	margin: 10px;
 	@media(max-width: $tablet){
-		@include columns(2, 250px, 1em);
+		// @include columns(2, 250px, 1em);
 	}
 }
 .article_p{
@@ -574,13 +511,13 @@ img{
 	width: 100%;
 	height: 200px;
 	padding: 10px;
-	background-color: $green;
-	@include clip-path(polygon(0 15%, 100% 0, 100% 100%, 0 100%));
+	// background-color: $green;
+	// @include clip-path(polygon(0 15%, 100% 0, 100% 100%, 0 100%));
   	// clip-path: url("#swg_h");
 }
 .links_columns{
 	padding: 50px 0 0 10px;
-	@include flexible(row, nowrap);
+	// @include flexible(row, nowrap);
 	float: left;
 }
 .link_div{
