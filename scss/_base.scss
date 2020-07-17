@@ -1,0 +1,64 @@
+@import '_reset';
+@import '_variables';
+@import '_menu';
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+html,body {
+	font-family: sans-serif;
+	scroll-behavior: smooth;
+	font-size: 16px;
+	@media(min-size: $tablet){
+		font-size: 18px;
+	}
+}
+h1{
+	color: $third;
+	font-size: 3rem;
+	@media(max-width: $landscape){
+		font-size: 2.1rem;
+	}
+	@media(max-width: $phone){
+		font-size: 1.9rem;
+	}
+}
+h2{
+	text-align: center;
+	color: $primary;
+	font-size: 2rem;
+	@media(max-width: $tablet){
+		font-size: 1.8rem;
+	}
+	@media(max-width: $landscape){
+		font-size: 1.5rem;
+	}
+}
+h3{
+	font-size: 1.8rem;
+	@media(max-width: $tablet){
+		font-size: 1.5rem;
+	}
+	@media(max-width: $landscape){
+		font-size: 1.3rem;
+	}
+}
+h1,h2,h3{
+	font-family:'Arima Madurai';
+}
+a{
+	color: $third;
+	&:hover, &:focus{
+		color: $secondary;
+	}
+}
+p{
+	color: $third;
+}
+img{
+	max-width: 100%;
+    height: auto;
+}
+section{
+	width: 100%;
+	padding: 1em;
+}
