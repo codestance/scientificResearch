@@ -2,106 +2,100 @@
 main{
 	position: relative;
 }
-.bubble{
+.particles{
 	position: absolute;
-	z-index: -1;
+	z-index: -2;
 	&:first-child{
-		top: -.5em;
-		left: -.8em;
+		top: 0;
+		right: 0;
 	}
 	&:nth-child(2){
-		top: calc(100vh - 4em);
-		right: 50%;
+		top: 0;
+		left: 0;
 	}
-}
-.bubble-orange{
-	overflow: hidden;
+	&:nth-child(3){
+		right: 10%;
+		top: 60vh;
+	}
 }
 .bg{
 	position: absolute;
 	display: block;
-	top: 2em;
+	top: 0;
 	right: 0;
 	z-index: -1;
-	@media(min-width: $landscape){
-		top: 3em;
-		right: 2em;
-	}
-	@media(min-width: $tablet){
-		top: 5em;
-		right: 3em;
-	}
-	@media(min-width: $desktop){
-		top: 5em;
-		right: 5em;
-		width: 35em;
-	}
 }
 .home {
-	min-height: 100vh;
+	height: 100vh;
+	max-height: 800px;
 	position: relative;
 	padding: 1em;
+	.home-heading{
+		padding: 12em 0 0 .8em;
+		.home-heading__box{
+			position: relative;
+			&:before{
+				content:"dr inż.";
+				position: absolute;
+				top: -.75em;
+				left: .75em;
+				width: 100%;
+				font-family: Arima Madurai;
+				color: $third;
+				font-size: 1.75em;
+			}
+		}
+	}
+	@media(min-width: $lg){
+		.home-heading{
+			padding: 15em 0 0 2em;
+		}
+	}
+}
+
+.about{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	@media(min-width: $tablet){
-		flex-direction: row-reverse;
+	@media(min-width: $md){
+		flex-direction: row;
+		align-items: center;
 	}
-}
-.home-img{
-	padding: 1em;
-	.home-img__border{
-		position: absolute;
-		content: "";
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border-color: $secondary;
-		border-style: solid;
-	}
-	.home-img__box{
-		position: relative;
-		width: 18em;
-		z-index: 1;
-		&::before{
-			@extend .home-img__border;
-			border-width: 0 0 1.5em 0;
-			overflow: hidden;
-		}
-		&::after{
-			@extend .home-img__border;
-			border-width: 1.5em 1.5em 0 1.5em;
-			z-index: -1;
+	.about-desc{
+		.about-desc__art{
+			padding: 1em;
+			margin: 0 auto;
+			p{
+				line-height: 1.5;
+			}
+			@media(min-width: md){
+				padding: 1em 1em 1em 0;
+			}
 		}
 	}
 }
-.home-heading{
-	padding: 1em;
-	.home-heading__box{
-		position: relative;
-		padding: 0 1em;
-		&:before{
-			content:"";
-			position: absolute;
-			top: -5em;
-			left: 0;
-			width: 20em;
-			height: 20em;
-			background-image: url('../images/headingBg.svg');
-			background-size: contain;
-			background-repeat: no-repeat;
-			z-index: -1;
-		}
-	}
+.about-img__border{
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-color: $secondary;
+	border-style: solid;
 }
-.about-desc{
-	padding: 1em;
-	width: 80%;
-	margin: 0 auto;
-	p{
-		line-height: 1.5;
+.about-img__box{
+	position: relative;
+	width: 18em;
+	z-index: 1;
+	&::before{
+		@extend .about-img__border;
+		border-width: 0 0 1.5em 0;
+		overflow: hidden;
+	}
+	&::after{
+		@extend .about-img__border;
+		border-width: 1.5em 1.5em 0 1.5em;
+		z-index: -1;
 	}
 }
 
@@ -115,12 +109,12 @@ main{
 //     	a{
 //     		padding-left: 5px;
 //     	}
-//     @media(max-width: $tablet){
+//     @media(max-width: $md){
 //     	width: 225px;
 // 		font-size: 1rem;
 // 		margin-top: 320px;
 //     }
-//     @media(max-width: $landscape){
+//     @media(max-width: $md){
 //     	display: inline-block;
 //     	height: auto;
 //     	float: left;
@@ -139,7 +133,7 @@ main{
 // 	max-width: 20px;
 // 	height: auto;
 // 	display: inline-block;
-// 	@media(max-width: $landscape){
+// 	@media(max-width: $md){
 //     	float: left;
 //     	clear: both;
 // 	}
@@ -167,10 +161,10 @@ main{
 	display: block;
     height: auto;
     max-height: 160px;
-    @media(max-width: $tablet){
+    @media(max-width: $md){
 		max-height: 130px;
 	}
-	@media(max-width: $landscape){
+	@media(max-width: $md){
 		max-height: 110px;
 	}
 }
@@ -184,11 +178,11 @@ main{
 // 	padding: 5px;
 // 	margin: 10px;
 // 	background: rgba(white,.1);
-// 	@media(max-width: $tablet){
+// 	@media(max-width: $md){
 // 		width: 170px;
 // 		height: 120px;
 // 	}
-// 	@media(max-width: $landscape){
+// 	@media(max-width: $md){
 // 		width: 150px;
 // 		height: 100px;
 // 		margin: 0 5px 5px 5px;
@@ -197,10 +191,10 @@ main{
 // .lecture p{
 // 	font-size: 1.2rem;
 // 	color: white;
-// 	@media(max-width: $tablet){
+// 	@media(max-width: $md){
 // 		font-size: 16px;
 // 	}
-// 	@media(max-width: $landscape){
+// 	@media(max-width: $md){
 // 		font-size: 14px;
 // 	}
 // }
@@ -245,11 +239,11 @@ main{
 	vertical-align: middle;
 	float: left;
 	margin: 20px;
-	@media(max-width: $tablet){
+	@media(max-width: $md){
 		width: 100px;
 		height: 100px;
 	}
-	@media(max-width: $phone){
+	@media(max-width: $sm){
 		width: 90px;
 		height: 90px;
 		margin: 10px;
@@ -298,7 +292,7 @@ main{
 	&:hover{
 		// background: linear-gradient(90deg,$pink,$light-green);
 	}
-	@media(max-width: $tablet){
+	@media(max-width: $md){
 		width: 250px;
 		height: 150px;
 		margin: 10px;
@@ -307,7 +301,7 @@ main{
 .project_title{
 	font-size: 1.2rem;
 	padding: 5px;
-	@media(max-width: $tablet){
+	@media(max-width: $md){
 		font-size: 15px;
 	}
 }
@@ -315,7 +309,7 @@ main{
 	padding: 5px;
 	text-align: left;
 	cursor: pointer;
-	@media(max-width: $tablet){
+	@media(max-width: $md){
 		font-size: 14px
 	}
 }
@@ -334,7 +328,7 @@ main{
 	// @include columns(2, 300px, 2em);
 	// border: 1px $pink solid;
 	margin: 10px;
-	@media(max-width: $tablet){
+	@media(max-width: $md){
 		// @include columns(2, 250px, 1em);
 	}
 }
@@ -342,7 +336,7 @@ main{
 	margin-bottom: 5px;
 	padding: 5px;
 	text-align: justify;
-	@media(max-width: $tablet){
+	@media(max-width: $md){
 		font-size: 14px;
 	}
 }
@@ -364,11 +358,11 @@ main{
 	margin-top: 30px;
 	width: 100px;
 	height: 100px;
-	@media(max-width: $landscape){
+	@media(max-width: $md){
 		width: 70px;
 		height: 70px;
 	}
-	@media(max-width: $phone){
+	@media(max-width: $sm){
 		width: 50px;
 		height: 50px;
 	}
