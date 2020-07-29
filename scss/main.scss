@@ -5,6 +5,7 @@ main{
 .particles{
 	position: absolute;
 	z-index: -2;
+	overflow: hidden;
 	&:first-child{
 		top: 0;
 		right: 0;
@@ -173,29 +174,47 @@ main{
 		background-size: cover;
 	}
 }
-.project{
-	margin: 1em 0;
-	cursor: pointer;
-	.project-title{
-		padding: .25 0;
+.projects{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 25%;
+	.projects-box{
+		border: .1em 0 solid $primary;
+		.project-title{
+			padding: .25em 0;
+			margin: 0;
+			button{
+				all: inherit;
+			}
+		}
+		div{
+			width: 100%;
+			padding: .25em;
+			text-align: left;	
+		}
+		.project-title + div{
+			border-bottom: .1em solid $primary;
+		}
 	}
-	.project-description{
-		padding: .25em;
-		text-align: left;
-		cursor: pointer;
+	@media(min-width: $md){
+		.projects-box{
+			width: 80%;
+		}
+	}
+	@media(min-width: $xl){
+		.projects-box{
+			width: 50%;
+		}
 	}
 }
-.visible{
-	display:block;
-}
-.invisible{
-	display:none;
-}
+
 // - - - A R T I C L E S - - -
 .articles-columns{
 	columns: 2 20em;
+	border: 1px solid $primary;
 	p{
 		margin-bottom: .25em;
-		padding: .25em 0;
+		padding: .25em;
 	}
 }
