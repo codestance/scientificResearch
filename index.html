@@ -17,12 +17,15 @@
       		</button>
 			<ul class ="menu-list" id="menu">
 				<li><a href=#home>Strona główna</a></li>
-				<li><a href=#about>O mnie</a></li>
 				<li><a href=#classes>Dydaktyka</a></li>
-				<li><a href="#">Praca naukowa</a></li>
-				<!-- <li><a href=#cooperation>Współpraca</a></li>
-				<li><a href=#projects>Projekty</a></li>
-				<li><a href=#articles>Artykuły</a></li> -->
+				<li class="has-submenu">
+					<a href="#science" aria-haspopup="true" aria-expanded="false">Praca naukowa</a>
+					<ul>
+						<li><a href=#cooperation>Współpraca</a></li>
+						<li><a href=#projects>Projekty</a></li>
+						<li><a href=#articles>Artykuły</a></li>
+					</ul>
+				</li>
 				<li><a href=#contact>Kontakt</a></li>
 			</ul>				
 		</nav>
@@ -46,10 +49,14 @@
 					<div class="home-heading__box">
 						<h1>Eunika Zielony</h1>
 					</div>
+					<p>
+						nauczyciel akademicki i&nbsp;pracownik naukowy
+						na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej
+					</p>
 					<button class="btn">Wyślij wiadomość</button>
 				</div>
 			</section>
-   			<section id="about" class="about">
+   			<!-- <section id="about" class="about">
 				<div class="about-img">
 					<div class="about-img__box">
 						<img src="images/eunika_zielony.png" alt="dr inż. Eunika Zielony">
@@ -76,7 +83,7 @@
 						</p>
 					</article>
 				</div>
-			</section>
+			</section> -->
 
    			<section id="classes">
 				<h2>Dydaktyka</h2>
@@ -100,7 +107,18 @@
 			</section>
 
    			<section class="science" id="science">
-   				<h2>Praca naukowa</h2>
+				<h2>Praca naukowa</h2>
+				<p class="science-desc">
+					Tematyka moich badań dotyczy struktur półprzewodnikowych, 
+					otrzymywanych ze związków II-VI (ZnO, ZnMgO, CdTe, ZnTe, i in.) 
+					mających zastosowanie w przemyśle optoelektronicznym oraz fotowoltaicznym. 
+					Moja praca naukowa skupia się głównie wokół badań podstawowych 
+					ww. struktur przy wykorzystaniu różnorodnych metod eksperymentalnych, 
+					takich jak: mikroskopia sił atomowych (AFM), spektroskopia Ramana, 
+					technika fotoluminescencji, pomiary charakterystyk prądowo-napięciowych (I-V) 
+					oraz pojemnościowo-napięciowych (C-V), metody spektroskopii pojemnościowej 
+					(np. DLTS, LDLTS) i inne. 
+				</p>
 				<div id="cooperation">
 					<h3>Współpraca</h3>
 					<div class="cooperation-columns">
@@ -182,11 +200,13 @@
 							</button>
 						</h4>
 						<div hidden>
-							Projekt badawczy własny
-							<br>Nr projektu: N N202 0911 33
-							<br>Okres realizacji: 2007-2010
-							<br>Jednostka finansująca: MNiSW
-							<br>Funkcja w projekcie: wykonawca
+							<p>
+								Projekt badawczy własny
+								<br>Nr projektu: N N202 0911 33
+								<br>Okres realizacji: 2007-2010
+								<br>Jednostka finansująca: MNiSW
+								<br>Funkcja w projekcie: wykonawca
+							</p>
 						</div>
 					</div>
 				</div>
@@ -195,38 +215,38 @@
    					<h3>Wybrane publikacje</h3>
    					<div class="articles-columns">
 						<p>
-							W. Jacak, E. Popko, A. Henrykowski, <span class="bold">E. Zielony</span>, K. Gwozdz, G. Luka, R. Pietruszka, B. Witkowski, L. Wachnicki, M. Godlewski, Liann-Be Chang, Ming-Jer Jeng
-							<br><span class="italic">On the size dependence and spatial range for the plasmon effect in photovoltaic efficiency enhancement</span>
+							W. Jacak, E. Popko, A. Henrykowski, <b>E. Zielony</b>, K. Gwozdz, G. Luka, R. Pietruszka, B. Witkowski, L. Wachnicki, M. Godlewski, Liann-Be Chang, Ming-Jer Jeng
+							<br><i>On the size dependence and spatial range for the plasmon effect in photovoltaic efficiency enhancement</i>
 							<br>Solar Energy Materials &amp; Solar Cells 147 1–16 (2016)
 						</p>
 						<p>
-							<span class="bold">E. Zielony</span>, K. Olender, E. Płaczek-Popko, T. Wosiński, A. Racino, Z. Gumienny, G. Karczewski and S. Chusnutdinow
-							<br><span class="italic">Electrical and photovoltaic properties of CdTe/ZnTe n-i-p junctions grown by molecular beam epitaxy</span>
+							<b>E. Zielony</b>, K. Olender, E. Płaczek-Popko, T. Wosiński, A. Racino, Z. Gumienny, G. Karczewski and S. Chusnutdinow
+							<br><i>Electrical and photovoltaic properties of CdTe/ZnTe n-i-p junctions grown by molecular beam epitaxy</i>
 							<br>Journal of Applied Physics, vol. 115, nr 24, art. 244501, s. 1-8 (2014)
 						</p>
 						<p>
-							M. Pietrzyk, <span class="bold">E. Zielony</span>, M. Stachowicz, A. Reszka, E. Popko, A. Wierzbicka, E. Przeździecka, A. 	Droba, A. Kozanecki
-							<br><span class="italic">Electro-optical characterization of ZnO/ZnMgO structure grown on p-type Si (111) by PA-MBE method</span>
+							M. Pietrzyk, <b>E. Zielony</b>, M. Stachowicz, A. Reszka, E. Popko, A. Wierzbicka, E. Przeździecka, A. 	Droba, A. Kozanecki
+							<br><i>Electro-optical characterization of ZnO/ZnMgO structure grown on p-type Si (111) by PA-MBE method</i>
 							<br>Journal of Alloys and Compounds, vol. 587, s. 724-728 (2014)
 						</p>
 						<p>
-							<span class="bold">E. Zielony</span>, E. Płaczek-Popko, P. Nowakowski, Z. Gumienny, A. Suchocki and G. Karczewski,
-							<br><span class="italic">Electro-optical characterization of Ti/Au-ZnTe Schottky diodes with&nbsp;CdTe&nbsp;quantum&nbsp;dots</span>
+							<b>E. Zielony</b>, E. Płaczek-Popko, P. Nowakowski, Z. Gumienny, A. Suchocki and G. Karczewski,
+							<br><i>Electro-optical characterization of Ti/Au-ZnTe Schottky diodes with&nbsp;CdTe&nbsp;quantum&nbsp;dots</i>
 							<br>Mat. Chem. 	Phys. 134, 821-828 (2012)
 						</p>
 						<p>
-							<span class="bold">E. Zielony</span>, E. Placzek-Popko, A. Henrykowski, Z. Gumienny, P. Kamyczek, J. Jacak, P. Nowakowski, 	G. Karczewski
-							<br><span class="italic">Laser irradiation effects on the CdTe/ZnTe quantum dot structure studied by Raman and AFM spectroscopy</span>
+							<b>E. Zielony</b>, E. Placzek-Popko, A. Henrykowski, Z. Gumienny, P. Kamyczek, J. Jacak, P. Nowakowski, 	G. Karczewski
+							<br><i>Laser irradiation effects on the CdTe/ZnTe quantum dot structure studied by Raman and AFM spectroscopy</i>
 							<br>J. Appl. Phys. 112, 063520-1-7 (2012)
 						</p>
 						<p>
-							T. Wiktorczyk, P. Biegański, <span class="bold">E. Zielony</span>
-							<br><span class="italic">Preparation and optical characterization of e-beam 	deposited cerium oxide films</span>
+							T. Wiktorczyk, P. Biegański, <b>E. Zielony</b>
+							<br><i>Preparation and optical characterization of e-beam 	deposited cerium oxide films</i>
 							<br>Optical Materials 34, 2101–2107 (2012)
 						</p>
 						<p>
-							<span class="bold">E. Zielony</span>, E. Placzek-Popko, P. Dyba, Z. Gumienny, L. Dobaczewski and G.Karczewski
-							<br><span class="italic">Deep level transient spectroscopy of hole traps related to CdTe self-assembled quantum dots embedded in ZnTe matrix</span>
+							<b>E. Zielony</b>, E. Placzek-Popko, P. Dyba, Z. Gumienny, L. Dobaczewski and G.Karczewski
+							<br><i>Deep level transient spectroscopy of hole traps related to CdTe self-assembled quantum dots embedded in ZnTe matrix</i>
 							<br>J. Nanosci. Nanotechnol. 11, 6830-6836 (2011)
 						</p>
    					</div>
@@ -249,27 +269,11 @@
 			</section>
    			
    			<footer>
-   				<div class="links_columns">
-   					<div class="link_div">
-   						<a target="_blank" href="http://www.leps.pwr.edu.pl/">
-   						<!-- <img src="images/logos/eps.png" alt="Laboratory for electrical properties of semiconductors"> -->
-   						</a>
-   					</div>
-   					<div class="link_div">
-   						<a target="_blank" href="http://www.nlqt.wppt.pwr.edu.pl/index2.html">
-   						<!-- <img src="images/logos/nlqt.png" alt="National laboratory for quantum technologies"> -->
-   						</a>
-   					</div>
-					<div class="link_div">
-   						<a target="_blank" href="http://pwr.edu.pl/">
-   						<!-- /<img src="images/logos/pwr.png" alt="Politechnika Wrocławska"> -->
-   						</a>
-   					</div>
-   					<div class="link_div">
-   						<a target="_blank" href="http://wppt.pwr.edu.pl/">
-   						<!-- <img src="images/logos/wppt.png" alt="Wydział podstawowych problemów techniki"> -->
-   						</a>
-   					</div> 
+   				<div class="links">
+					<a target="_blank" href="http://www.leps.pwr.edu.pl/">Laboratorium Właściwości Elektrycznych Półprzewodników</a>
+					<a target="_blank" href="http://www.nlqt.wppt.pwr.edu.pl/index2.html">Narodowe Laboratorium Technologii Kwantowych</a>
+					<a target="_blank" href="http://wppt.pwr.edu.pl/">Wydział Podstawowych Problemów Techniki</a>
+					<a target="_blank" href="http://pwr.edu.pl/">Politechnika Wrocławska</a>
 				</div>	
 			</footer>
 		</main>

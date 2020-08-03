@@ -46,6 +46,12 @@ main{
 				font-size: 1.75em;
 			}
 		}
+		p{
+			max-width: 20em;
+			padding-bottom: 1em;
+			margin-top: -1em;
+			line-height: 1.5em;
+		}
 	}
 	@media(min-width: $lg){
 		.home-heading{
@@ -54,51 +60,51 @@ main{
 	}
 }
 
-.about{
-	display: flex;
-	flex-direction: column;
-	@media(min-width: $md){
-		flex-direction: row;
-		align-items: center;
-	}
-	.about-desc{
-		.about-desc__art{
-			padding: 1em;
-			margin: 0 auto;
-			p{
-				line-height: 1.5;
-			}
-			@media(min-width: md){
-				padding: 1em 1em 1em 0;
-			}
-		}
-	}
-}
-.about-img__border{
-	position: absolute;
-	content: "";
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	border-color: $secondary;
-	border-style: solid;
-}
-.about-img__box{
-	position: relative;
-	width: 18em;
-	z-index: 1;
-	&::before{
-		@extend .about-img__border;
-		border-width: 0 0 1.5em 0;
-		overflow: hidden;
-	}
-	&::after{
-		@extend .about-img__border;
-		border-width: 1.5em 1.5em 0 1.5em;
-		z-index: -1;
-	}
-} 
+// .about{
+// 	display: flex;
+// 	flex-direction: column;
+// 	@media(min-width: $md){
+// 		flex-direction: row;
+// 		align-items: center;
+// 	}
+// 	.about-desc{
+// 		.about-desc__art{
+// 			padding: 1em;
+// 			margin: 0 auto;
+// 			p{
+// 				line-height: 1.5;
+// 			}
+// 			@media(min-width: md){
+// 				padding: 1em 1em 1em 0;
+// 			}
+// 		}
+// 	}
+// }
+// .about-img__border{
+// 	position: absolute;
+// 	content: "";
+// 	top: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 100%;
+// 	border-color: $secondary;
+// 	border-style: solid;
+// }
+// .about-img__box{
+// 	position: relative;
+// 	width: 18em;
+// 	z-index: 1;
+// 	&::before{
+// 		@extend .about-img__border;
+// 		border-width: 0 0 1.5em 0;
+// 		overflow: hidden;
+// 	}
+// 	&::after{
+// 		@extend .about-img__border;
+// 		border-width: 1.5em 1.5em 0 1.5em;
+// 		z-index: -1;
+// 	}
+// } 
 .classes{
 	width: 100%;
 	height: 100%;
@@ -126,6 +132,15 @@ main{
 		}
 	}
 }
+.science{
+	background: $secondary;
+	.science-desc{
+		background: white;
+		margin: 0 2em;
+		padding: .5em;
+		line-height: 1.5em;
+	}
+}
 .science > div{
 	padding: 1em;
 }
@@ -135,19 +150,19 @@ main{
 	flex-wrap: wrap;
 	justify-content: center;
 	.cooperation-company{
-		width: 5em;
-		height: 5em;
+		width: 4em;
+		height: 4em;
 		border: 1px $primary solid;
 		text-align: center;
 		vertical-align: middle;
-		margin: 1em;
+		margin: 0 1em;
 		@media(min-width: $md){
-			width: 8em;
-			height: 8em;
+			width: 6em;
+			height: 6em;
 		}
 		@media(min-width: $xl){
-			width: 10em;
-			height: 10em;
+			width: 8em;
+			height: 8em;
 		}
 	}
 	.company{
@@ -180,21 +195,31 @@ main{
 	align-items: center;
 	padding: 0 25%;
 	.projects-box{
-		border: .1em 0 solid $primary;
+		background: white;
+		border-bottom: .1em dotted $primaryDarker;
 		.project-title{
+			position: relative;
 			padding: .25em 0;
 			margin: 0;
+			font-weight: normal;
+			color: $third;
+			&::before{
+				position: absolute;
+				content: "";
+				top: -.1em;
+				width: 100%;
+				border-top: .1em dotted $primaryDarker;
+			}
 			button{
 				all: inherit;
+				padding-left: .25em;
+				cursor: pointer;
 			}
 		}
 		div{
 			width: 100%;
-			padding: .25em;
+			padding: .1em 0 .5em 1em;
 			text-align: left;	
-		}
-		.project-title + div{
-			border-bottom: .1em solid $primary;
 		}
 	}
 	@media(min-width: $md){
@@ -208,13 +233,28 @@ main{
 		}
 	}
 }
-
-// - - - A R T I C L E S - - -
 .articles-columns{
 	columns: 2 20em;
-	border: 1px solid $primary;
+	padding: .5em;
+	background: white;
 	p{
 		margin-bottom: .25em;
 		padding: .25em;
+	}
+}
+
+footer{
+	padding: 1em;
+	font-size: .8em;
+	background: $third;
+	.links{
+		a{
+			color: $secondary;
+			display: block;
+			padding: .2em 0;
+			&:hover{
+				color: $primary;
+			}
+		}
 	}
 }
