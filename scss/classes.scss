@@ -1,10 +1,4 @@
-// @import 'compass/css3';
-@import '_reset';
-@import '_variables';
-@import '_mixins';
-@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext');
-
-
+@import '_base';
 html,body {
 	font-family:'Arima Madurai';
 	scroll-behavior: smooth;
@@ -16,10 +10,10 @@ h1 {
 	margin: 0;
 	align-items: center;
 	color: #fff;
-	@media (max-width: $tablet){
+	@media (max-width: $md){
 		font-size: 1.5rem;
 	}
-	@media (max-width: $phone){
+	@media (max-width: $sm){
 		font-size: 1.3rem;
 	}
 }
@@ -74,18 +68,18 @@ button span:nth-child(2){
 	width: 250px;
     // background-color: $mango;
     padding-left: 5px;
-    @media(max-width: $tablet){
+    @media(max-width: $md){
     	width: 300px;
     }
-    @media(max-width: $phone){
+    @media(max-width: $sm){
     	width: 260px;
     }
 }
 .lectures_box{
-	@include flexible(column, nowrap);
+	// @include flexible(column, nowrap);
 	clear: both;
 	padding: 100px 260px 0 10px;
-	@media(max-width: $tablet){
+	@media(max-width: $md){
 		padding: 110px 10px 0 10px;
 	}
 }
@@ -95,13 +89,13 @@ button span:nth-child(2){
 .info{
 	color: #00645a;
 	font-size: 1.5rem;
-	@media(max-width: $tablet){
+	@media(max-width: $md){
 		font-size: 1.2rem;
 	}
 }
 
 .materials{
-	@include columns(4, 100px, 2em);
+	// @include columns(4, 100px, 2em);
     text-align: center;
     padding: 10px;
     margin-top: 10px;
