@@ -23,7 +23,7 @@ body{
 }
 h1{
 	color: $third;
-	font-size: 3rem;
+	font-size: 3.5rem;
 	@media(max-width: $md){
 		font-size: 2.1rem;
 	}
@@ -32,7 +32,6 @@ h1{
 	}
 }
 h2{
-	text-align: center;
 	color: $primary;
 	font-size: 2rem;
 	@media(max-width: $md){
@@ -43,12 +42,12 @@ h2{
 	}
 }
 h3{
-	font-size: 1.8rem;
+	font-size: 1em;
+	text-transform: uppercase;
+	text-align: center;
+	color: $primaryDarker;
 	@media(max-width: $md){
-		font-size: 1.5rem;
-	}
-	@media(max-width: $md){
-		font-size: 1.3rem;
+		font-size: .8em;
 	}
 }
 h1,h2,h3{
@@ -56,12 +55,10 @@ h1,h2,h3{
 }
 a{
 	color: $third;
-	&:hover, &:focus{
-		color: $secondary;
-	}
 }
 p{
 	color: $third;
+	line-height: 1.5em;
 }
 img{
 	max-width: 100%;
@@ -70,6 +67,9 @@ img{
 section{
 	width: 100%;
 	padding: 1em;
+	@media(min-width: $lg){
+		padding: 3.5em 1em 1em 1em;
+	}
 }
 button{
 	border: none;

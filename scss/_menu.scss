@@ -5,8 +5,7 @@ nav{
 	top: 0;
 	left: 0;
 	z-index: 9999;
-	min-height: 18em;
-	height: 100%;
+	min-height: 50vh;
 }
 .menu-list {
 	display: flex;
@@ -20,7 +19,7 @@ nav{
 	text-align: left;
 	overflow: auto;
 	transition: width ease-in .6s;
-	background: $secondary;
+	background-color: $secondary;
 	li{
 		margin: 0 1.5em;
 		list-style: none;
@@ -41,4 +40,53 @@ nav{
 			cursor: pointer;
 		}
 	}
+	.submenu{
+		padding-left: 1em;
+		font-size: .9em;
+		li{
+			margin: 0;
+			&:first-child,&:last-child{
+				margin: 0;
+			}
+		}
+	}
+}
+@media(min-width: $lg){
+	nav{
+		right: 0;
+		min-height: unset;
+	}
+	.menu-list{
+		flex-direction: row;
+		justify-content: flex-start;
+		width: 100%;
+		height: auto;
+		background-color: transparent;
+		transition: background-color 200ms linear;
+		li{
+			margin: 1em;
+			&:first-child, &:last-child{
+				margin: 1em;
+			}
+			a{
+				font-weight: normal;
+				&:hover, &:focus{
+					color: $primaryDarker;
+				}
+			}
+		}
+		.has-submenu{
+			.submenu{
+				display: none;
+			}
+			&:hover{
+				.submenu{
+					display: block;
+				}
+			}
+		}
+	}
+}
+.menu-colored{
+	background-color: $secondary;
 }

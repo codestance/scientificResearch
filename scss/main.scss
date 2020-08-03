@@ -104,6 +104,9 @@ main{
 }
 .science > div{
 	padding: 1em;
+	@media(min-width: $lg){
+		padding: 3.5em 1em 1em 1em;
+	}
 }
 .cooperation-columns{
 	display: flex;

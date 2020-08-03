@@ -29,15 +29,16 @@ const hideAfter = function(){
 	menuButton.classList.remove('menu-button_open');
 	menuList.style.width = '0';
 };
-for (let i = 0; i<menuItems.length; i++){
-	menuItems[i].addEventListener('click', hideAfter, false);
+if(window.innerWidth<1000){
+	for (let i = 0; i<menuItems.length; i++){
+		menuItems[i].addEventListener('click', hideAfter, false);
+	}
+}else{
+	window.onscroll = function(){
+		if(window.scrollY >= 200){
+			menuList.classList.add('menu-colored');
+		}else{
+			menuList.classList.remove('menu-colored');
+		}
+	}
 }
-
-// function toggleClass(object){
-// 	var classes = object.getAttribute('class');
-// 	var output;
-// 	output = classes.replace('invisible','visible');
-// 	if(output == classes)
-// 		output = classes.replace('visible','invisible');
-// 	object.setAttribute('class',output);
-// }
