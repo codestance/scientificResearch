@@ -15,12 +15,12 @@
 			<button id="menu-button" class="menu-button">
 				<span></span><span></span><span></span><span></span>
       		</button>
-			<ul class ="menu-list" id="menu">
+			<ul class ="menu-list" id="menu" role="menubar">
 				<li><a href=#home>Strona główna</a></li>
 				<li><a href=#classes>Dydaktyka</a></li>
 				<li class="has-submenu">
 					<a href="#science" aria-haspopup="true" aria-expanded="false">Praca naukowa</a>
-					<ul>
+					<ul aria-label="Praca naukowa" role="menu">
 						<li><a href=#cooperation>Współpraca</a></li>
 						<li><a href=#projects>Projekty</a></li>
 						<li><a href=#articles>Artykuły</a></li>
@@ -51,40 +51,11 @@
 					</div>
 					<p>
 						nauczyciel akademicki i&nbsp;pracownik naukowy
-						na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej
+						na Wydziale&nbsp;Podstawowych Problemów&nbsp;Techniki Politechniki&nbsp;Wrocławskiej
 					</p>
 					<button class="btn">Wyślij wiadomość</button>
 				</div>
 			</section>
-   			<!-- <section id="about" class="about">
-				<div class="about-img">
-					<div class="about-img__box">
-						<img src="images/eunika_zielony.png" alt="dr inż. Eunika Zielony">
-					</div>
-				</div>
-				<div class="about-desc">
-					<h2>O mnie</h2>
-					<article class="about-desc__art">
-						<p>
-							Obecnie jestem nauczycielem akademickim i&nbsp;pracownikiem naukowym zatrudnionym
-							na Wydziale Podstawowych Problemów Techniki Politechniki Wrocławskiej. 
-							Pracuję w Katedrze Technologii Kwantowych, w zespole Pani Prof. Ewy Popko, 
-							zajmującym się badaniem struktur półprzewodnikowych na bazie związków II-VI oraz
-							III-V metodami elektrooptycznymi.
-						</p>
-						<p>
-							Tematyka moich badań dotyczy struktur półprzewodnikowych, 
-							otrzymywanych ze związków II-VI (ZnO, ZnMgO, CdTe, ZnTe, i in.) 
-							mających zastosowanie w&nbsp;przemyśle optoelektronicznym oraz fotowoltaicznym. 
-							Moja praca naukowa skupia się głównie wokół badań podstawowych ww. struktur przy wykorzystaniu 
-							różnorodnych metod eksperymentalnych, takich jak: mikroskopia sił atomowych (AFM), 
-							spektroskopia Ramana, technika fotoluminescencji, pomiary charakterystyk prądowo-napięciowych (I-V) 
-							oraz pojemnościowo-napięciowych (C-V), metody spektroskopii pojemnościowej (np. DLTS, LDLTS) i inne.
-						</p>
-					</article>
-				</div>
-			</section> -->
-
    			<section id="classes">
 				<h2>Dydaktyka</h2>
    				<div class="classes">
@@ -241,7 +212,7 @@
 						</p>
 						<p>
 							T. Wiktorczyk, P. Biegański, <b>E. Zielony</b>
-							<br><i>Preparation and optical characterization of e-beam 	deposited cerium oxide films</i>
+							<br><i>Preparation and optical characterization of e-beam deposited cerium oxide films</i>
 							<br>Optical Materials 34, 2101–2107 (2012)
 						</p>
 						<p>
@@ -253,19 +224,20 @@
    				</div>
 			</section>
 			<section class="contact" id="contact">
-				<h2>Kontakt</h2>
-				<div>
-					<!-- <img src="images/contact/location.png" class="contact_img" alt="adres:"> -->
-					<a target="_blank" href="https://www.google.pl/maps/place/Gmach+g%C5%82%C3%B3wny+PWr/@51.1080012,17.0590975,17z/data=!4m8!1m2!2m1!1sA1+pwr!3m4!1s0x470fc281d7009f63:0x50a3a2b4d7f63baf!8m2!3d51.1073299!4d17.0617982">231a A1</a>
+				<div class="contact-box">
+					<a target="_blank" href="https://www.google.pl/maps/place/Gmach+g%C5%82%C3%B3wny+PWr/@51.1080012,17.0590975,17z/data=!4m8!1m2!2m1!1sA1+pwr!3m4!1s0x470fc281d7009f63:0x50a3a2b4d7f63baf!8m2!3d51.1073299!4d17.0617982">
+						<span class="icon-map-marker"></span>
+						231a A1
+					</a>
+					<a href="tel:+48713202642">
+						<span class="icon-mobile"></span>
+						+48713202642
+					</a>
+					<a href="mailto:eunika.zielony@pwr.edu.pl">
+						<span class="icon-envelope"></span>
+						eunika.zielony@pwr.edu.pl
+					</a>
 				</div>
-				<div>
-					<!-- <img src="images/contact/phone.png" class="contact_img" alt="tel:"> -->
-					<a href="tel:+48713202642">+48713202642</a>
-				</div>
-				<div>
-					<!-- <img src="images/contact/mail.png" class="contact_img" alt="mail:"> -->
-					<a href="mailto:eunika.zielony@pwr.edu.pl">eunika.zielony@pwr.edu.pl</a>
-				 </div>
 			</section>
    			
    			<footer>
