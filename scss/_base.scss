@@ -2,8 +2,6 @@
 @import '_variables';
 @import '_menu';
 @import url('https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-
 html,body {
 	font-family: sans-serif;
 	scroll-behavior: smooth;
@@ -50,7 +48,7 @@ h3{
 		font-size: .8em;
 	}
 }
-h1,h2,h3{
+h1,h2,h3, nav{
 	font-family:'Arima Madurai';
 }
 a{
@@ -66,9 +64,9 @@ img{
 }
 section{
 	width: 100%;
-	padding: 1em;
+	padding: 3.5em 1em 1em 1em;
 	@media(min-width: $lg){
-		padding: 3.5em 1em 1em 1em;
+		padding: 1em;
 	}
 }
 button{
