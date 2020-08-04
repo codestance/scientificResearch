@@ -33,8 +33,7 @@ nav{
 			display: block;
 			padding: .25em 0;
 			position: relative;
-			font-size: 1em;
-			font-weight: bold;
+			font-size: 1.1em;
 			text-transform: uppercase;
 			white-space: nowrap;
 			cursor: pointer;
@@ -82,11 +81,12 @@ nav{
 			&:hover{
 				.submenu{
 					display: block;
+					background: white;
 				}
 			}
 		}
 	}
 }
 .menu-colored{
-	background-color: $secondary;
+	background-color: white;
 }
