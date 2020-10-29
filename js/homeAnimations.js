@@ -9,21 +9,34 @@ anime.timeline({
     easing: 'linear',
     loop: true
 }).add({
-    targets: '.particles-blue',
-    d: [
-        {value: blueB},
-        {value: blueB}
-    ]
+    targets: '.particles_blue',
+    scale:[
+        {value: .8},
+        {value: .5},
+        {value: .8},
+        {value: 1}
+    ],
+    duration: 5000
 }).add({
-    targets: '.particles-orange__top',
+    targets: '.particles_orange__top',
     d: [
         {value: orangeTopB},
         {value: orangeTopA}
     ]
 },'-=2800').add({
-    targets: '.particles-orange__bottom',
+    targets: '.particles_orange__bottom',
     d: [
         {value: orangeBottomB},
         {value: orangeBottomA}
     ]
 },'-=2600')
+function virus(){
+    anime({
+        targets: '.virus',
+        rotate: '1turn',
+        duration: 50000,
+        // delay: 200,
+        loop: true
+    })
+}
+virus()

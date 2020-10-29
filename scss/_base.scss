@@ -1,7 +1,8 @@
 @import '_reset';
 @import '_variables';
 @import '_menu';
-@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext');
+// @import url('https://fonts.googleapis.com/css?family=Arima+Madurai&subset=latin,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 html,body {
 	font-family: sans-serif;
 	scroll-behavior: smooth;
@@ -10,15 +11,15 @@ html,body {
 		font-size: 18px;
 	}
 }
-html{
-	max-width: $max;
-	margin: 0 auto;
-}
-body{
-	@media(min-width: $max){
-		box-shadow: 0 0 3em 3em $secondary;
-	}	
-}
+// html{
+// 	max-width: $max;
+// 	margin: 0 auto;
+// }
+// body{
+// 	@media(min-width: $max){
+// 		box-shadow: 0 0 3em 3em $secondary;
+// 	}	
+// }
 h1{
 	color: $third;
 	font-size: 3.5rem;
@@ -49,7 +50,7 @@ h3{
 	}
 }
 h1,h2,h3, nav{
-	font-family:'Arima Madurai';
+	font-family:Lato;
 }
 a{
 	color: $third;

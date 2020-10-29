@@ -2,6 +2,7 @@
 @import '_icons';
 main{
 	position: relative;
+	min-height: 100vh;
 }
 .particles{
 	position: absolute;
@@ -28,26 +29,12 @@ main{
 	z-index: -1;
 }
 .home {
-	height: 100vh;
 	max-height: 800px;
 	min-height: 350px;
 	position: relative;
 	padding: 1em;
 	.home-heading{
 		padding: 10em 0 0 .8em;
-		.home-heading__box{
-			position: relative;
-			&:before{
-				content:"dr inż.";
-				position: absolute;
-				top: -.75em;
-				left: .75em;
-				width: 100%;
-				font-family: Arima Madurai;
-				color: $third;
-				font-size: 1.75em;
-			}
-		}
 		p{
 			max-width: 16em;
 			padding-bottom: 1em;
@@ -67,148 +54,6 @@ main{
 				max-width: 25em;
 			}
 		}
-	}
-}
-.classes{
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	padding: 0 1em;
-	a{
-		display: block;
-		margin: 1em;
-	}
-	.lecture{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		min-width: 6em;
-		max-width: 12em;
-		min-height: 5em;
-		background: white;
-		box-shadow: 0 0 .5em 0 $secondary;
-		p{
-			padding: .5em;
-			text-align: center;
-		}
-	}
-}
-.science{
-	background: $secondary;
-	.science-desc{
-		background: white;
-		margin: 0 1em;
-		padding: .5em;
-	}
-}
-.science > div{
-	padding: 1em;
-	@media(min-width: $lg){
-		padding: 3.5em 1em 1em 1em;
-	}
-}
-.cooperation-columns{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	.cooperation-company{
-		width: 4em;
-		height: 4em;
-		border: 1px $primary solid;
-		text-align: center;
-		vertical-align: middle;
-		margin: .5em;
-		@media(min-width: $md){
-			width: 6em;
-			height: 6em;
-			margin: 0 1em;
-		}
-		@media(min-width: $xl){
-			width: 8em;
-			height: 8em;
-		}
-	}
-	.company{
-		visibility: hidden;
-	}
-	.ifpan{
-		background-image: url(../images/logos/ifpan_logo.jpg);
-		background-size: cover;
-	}
-	.wemif{
-		background-image: url(../images/logos/wemif_logo.png);
-		background-size: cover;
-	}
-	.imim{
-		background-image: url(../images/logos/imim_logo.png);
-		background-size: cover;
-	}
-	.tud{
-		background-image: url(../images/logos/tud_logo.png);
-		background-size: cover;
-	}
-	.unipress{
-		background-image: url(../images/logos/unipress_logo.png);
-		background-size: cover;
-	}
-}
-.projects{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 0 25%;
-	.projects-box{
-		background: white;
-		border-bottom: .1em dotted $primaryDarker;
-		.project-title{
-			position: relative;
-			padding: .25em 0;
-			margin: 0;
-			font-weight: normal;
-			font-size: 1.1em;
-			color: $third;
-			&::before{
-				position: absolute;
-				content: "";
-				top: -.1em;
-				width: 100%;
-				border-top: .1em dotted $primaryDarker;
-			}
-			button{
-				all: inherit;
-				padding-left: .25em;
-				cursor: pointer;
-			}
-		}
-		div{
-			width: 100%;
-			padding: .1em 0 .5em 1em;
-			text-align: left;	
-		}
-	}
-	@media(min-width: $md){
-		.projects-box{
-			width: 80%;
-		}
-	}
-	@media(min-width: $xl){
-		.projects-box{
-			width: 50%;
-		}
-	}
-}
-.articles-columns{
-	columns: 2 20em;
-	padding: .5em;
-	background: white;
-	p{
-		margin-bottom: .25em;
-		padding: .25em;
 	}
 }
 .contact{
