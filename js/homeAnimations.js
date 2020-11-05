@@ -9,41 +9,75 @@ anime.timeline({
 }).add({
     targets: '.particles_blue',
     scale:[
-        {value: .8},
-        {value: .5},
+        {value: .95},
+        {value: .85},
         {value: .8},
         {value: 1}
     ],
-    duration: 5000
 }).add({
     targets: '.particles_orange__top',
     d: [
         {value: orangeTopB},
         {value: orangeTopA}
     ]
-},'-=2800').add({
+},1000).add({
     targets: '.particles_orange__bottom',
     d: [
         {value: orangeBottomB},
         {value: orangeBottomA}
     ]
-},'-=2600')
+},2000)
 
+function countOrigins(el){
+    const origin = el.getBBox();
+    const originX = origin.x + origin.width/2;
+    const originY = origin.y + origin.height/2;
+    return `transform-origin: ${originX}px ${originY}px`
+}
 function loaded(){
-    debugger
     const bg = document.querySelector('#bg');
     const virus = bg.contentDocument.querySelector('#virus');
-    const virusOrigin = virus.getBBox();
-    const virusOriginX = virusOrigin.x + virusOrigin.width/2;
-    const virusOriginY = virusOrigin.y + virusOrigin.height/2;
-    const virusPaths = [...virus.children];
-    const bubbles = bg.contentDocument.querySelector('#bubbles').children;
-    const bubblesPaths = [...bubbles].map(path=>path.getAttribute('d'));
+    virus.setAttribute('style', countOrigins(virus));
+    // const virusOrigin = virus.getBBox();
+    // const virusOriginX = virusOrigin.x + virusOrigin.width/2;
+    // const virusOriginY = virusOrigin.y + virusOrigin.height/2;
+    // const virusPaths = [...virus.children];
+    // virusPaths.map(path=>path.setAttribute('style', `transform-origin: ${virusOriginX}px ${virusOriginY}px`))
+    const bubbles = [...bg.contentDocument.querySelector('#bubbles').children];
+    const bubbles2 = [...bg.contentDocument.querySelector('#bubbles2').children];
+    const bubbles3 = [...bg.contentDocument.querySelector('#bubbles3').children];
+    bubbles3.map(path=>path.setAttribute('style',countOrigins(path)));
     anime({
-        targets: virusPaths,
-        transformOrigin: [`"${virusOriginX}px ${virusOriginY}px"`, `"${virusOriginX}px ${virusOriginY}px"`],
+        targets: virus,
         rotate: '1turn',
-        duration: 20000,
+        duration: 10000,
+        loop: true
+    })
+    anime({
+        targets: bubbles,
+        delay: anime.stagger(500),
+        translateY: function(){return anime.random(0, -100);},
+        translateX: function(){return anime.random(0, 20);},
+        opacity:0,
+        easing: "easeInOutSine"
+    })
+    anime({
+        targets: bubbles2,
+        delay: anime.stagger(150),
+        translateY: function(){return anime.random(-150, -200);},
+        translateX: function(){return anime.random(-5, 5);},
+        duration: 1500,
+        opacity: 0,
+        easing: "easeInOutSine",
+        loop: true
+    })
+    anime({
+        targets: bubbles3,
+        delay: anime.stagger(400),
+        translateY: function(){return anime.random(-200, -250);},
+        duration: 4000,
+        scale: 0,
+        easing: "easeInOutSine",
         loop: true
     })
 }
