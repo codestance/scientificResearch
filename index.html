@@ -11,82 +11,102 @@
    </head>
    <body>
 		<nav role="navigation">
-			<button id="menu-button" class="menu-button">
+			<button id="menu-button" class="menu-button" aria-label="Menu button">
 				<span></span><span></span><span></span><span></span>
       		</button>
 			<ul class ="menu-list" id="menu" role="menubar">
-				<li><a href=#>Home</a></li>
-				<li><a href=#about>About</a></li>
-				<li><a href=#contact>Contact</a></li>
+				<li><a role="menuitem" href=#>Home</a></li>
+				<li><a role="menuitem" href=#about>About</a></li>
+				<li><a role="menuitem" href=#services>Services</a></li>
+				<li><a role="menuitem" href=#contact>Contact</a></li>
 			</ul>				
 		</nav>
 		   <main>
 			<svg class="particles" width="233" height="168" viewBox="0 0 233 168" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path class="particles_blue" opacity="0.4" d="M231.935 115.572C230.179 102.064 217.804 92.5383 204.296 94.2943C197.413 95.189 191.577 98.849 187.728 104.002L158.867 85.6317C160.003 83.413 160.925 81.045 161.589 78.5383C164.985 65.7183 160.892 52.685 152.016 44.0557L154.661 40.4957L154.644 40.4837L160.307 32.9543C163.131 34.6063 166.445 35.4957 169.959 35.3237C179.595 34.8557 187.028 26.6637 186.561 17.0263C186.092 7.389 177.901 -0.0443345 168.263 0.423666C158.625 0.891666 151.192 9.08366 151.66 18.7223C151.899 23.6317 154.148 27.9623 157.567 30.9743L149.408 41.7597C145.688 38.7957 141.313 36.5317 136.42 35.2357C117.513 30.2277 98.1266 41.497 93.1186 60.405C90.5679 70.0357 92.2466 79.7863 97.0013 87.7023L76.6546 102.077C65.3066 85.5463 43.3172 79.2463 24.6386 88.1397C3.94925 97.9903 -4.83742 122.749 5.01458 143.438C14.8639 164.128 39.6226 172.916 60.3119 163.065C80.9053 153.26 89.6986 128.689 80.0706 108.06L101.068 93.1983C105.513 98.1317 111.389 101.88 118.288 103.708C132.988 107.6 147.975 101.652 156.272 89.9277L174 100.998L174.016 100.973L185.255 108.084C183.251 112.246 182.379 117.012 183.019 121.933C184.776 135.441 197.149 144.968 210.657 143.21C224.165 141.454 233.692 129.08 231.935 115.572Z" fill="#063E59"/>
+				<path class="particles_blue" opacity="0.4" d="M231.935 115.572C230.179 102.064 217.804 92.5383 204.296 94.2943C197.413 95.189 191.577 98.849 187.728 104.002L158.867 85.6317C160.003 83.413 160.925 81.045 161.589 78.5383C164.985 65.7183 160.892 52.685 152.016 44.0557L154.661 40.4957L154.644 40.4837L160.307 32.9543C163.131 34.6063 166.445 35.4957 169.959 35.3237C179.595 34.8557 187.028 26.6637 186.561 17.0263C186.092 7.389 177.901 -0.0443345 168.263 0.423666C158.625 0.891666 151.192 9.08366 151.66 18.7223C151.899 23.6317 154.148 27.9623 157.567 30.9743L149.408 41.7597C145.688 38.7957 141.313 36.5317 136.42 35.2357C117.513 30.2277 98.1266 41.497 93.1186 60.405C90.5679 70.0357 92.2466 79.7863 97.0013 87.7023L76.6546 102.077C65.3066 85.5463 43.3172 79.2463 24.6386 88.1397C3.94925 97.9903 -4.83742 122.749 5.01458 143.438C14.8639 164.128 39.6226 172.916 60.3119 163.065C80.9053 153.26 89.6986 128.689 80.0706 108.06L101.068 93.1983C105.513 98.1317 111.389 101.88 118.288 103.708C132.988 107.6 147.975 101.652 156.272 89.9277L174 100.998L174.016 100.973L185.255 108.084C183.251 112.246 182.379 117.012 183.019 121.933C184.776 135.441 197.149 144.968 210.657 143.21C224.165 141.454 233.692 129.08 231.935 115.572Z" fill="#6BC0DE"/>
 			</svg>
 			<svg class="particles" width="218" height="182" viewBox="0 0 218 182" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path class="particles_orange__top" d="M78.484 66.1765C78.3013 74.0325 81.3853 81.2005 86.488 86.3952L53.6533 123.833C41.9013 114.037 24.496 113.562 12.1466 123.549C-1.90537 134.914 -4.08404 155.519 7.28129 169.571C18.6466 183.625 39.252 185.803 53.304 174.438C67.3573 163.073 69.536 142.467 58.1706 128.415C57.996 128.199 57.812 127.994 57.6333 127.783L67.796 115.978L67.7706 115.955L90.62 89.8619C94.9373 92.8272 100.133 94.6192 105.761 94.7499C117.752 95.0272 128.151 87.7045 132.353 77.1859L147.987 82.4112L147.995 82.3885L170.845 90.2405C170.072 93.8059 170.28 97.6259 171.679 101.287C175.515 111.323 186.759 116.349 196.793 112.514C206.829 108.679 211.856 97.4352 208.021 87.3992C205.803 81.5952 201.101 77.4832 195.595 75.7752L196.489 62.9712L196.467 62.9699L198.356 38.8819C202 38.7392 205.648 37.5832 208.843 35.3125C217.6 29.0899 219.655 16.9459 213.432 8.18719C207.209 -0.57014 195.067 -2.62613 186.308 3.59654C177.551 9.8192 175.496 21.9645 181.719 30.7219C184.888 35.1819 189.595 37.8939 194.607 38.6685L191.728 74.9992C188.825 74.7139 185.817 75.0605 182.907 76.1725C177.795 78.1259 173.993 82.0059 171.989 86.6645L133.551 73.4219C134.013 71.5085 134.287 69.5192 134.335 67.4712C134.692 52.0485 122.479 39.2565 107.056 38.8992C91.6346 38.5419 78.8413 50.7539 78.484 66.1765Z" fill="#F9C1A6" fill-opacity="0.6"/>
+				<path class="particles_pink__top" d="M78.484 66.1765C78.3013 74.0325 81.3853 81.2005 86.488 86.3952L53.6533 123.833C41.9013 114.037 24.496 113.562 12.1466 123.549C-1.90537 134.914 -4.08404 155.519 7.28129 169.571C18.6466 183.625 39.252 185.803 53.304 174.438C67.3573 163.073 69.536 142.467 58.1706 128.415C57.996 128.199 57.812 127.994 57.6333 127.783L67.796 115.978L67.7706 115.955L90.62 89.8619C94.9373 92.8272 100.133 94.6192 105.761 94.7499C117.752 95.0272 128.151 87.7045 132.353 77.1859L147.987 82.4112L147.995 82.3885L170.845 90.2405C170.072 93.8059 170.28 97.6259 171.679 101.287C175.515 111.323 186.759 116.349 196.793 112.514C206.829 108.679 211.856 97.4352 208.021 87.3992C205.803 81.5952 201.101 77.4832 195.595 75.7752L196.489 62.9712L196.467 62.9699L198.356 38.8819C202 38.7392 205.648 37.5832 208.843 35.3125C217.6 29.0899 219.655 16.9459 213.432 8.18719C207.209 -0.57014 195.067 -2.62613 186.308 3.59654C177.551 9.8192 175.496 21.9645 181.719 30.7219C184.888 35.1819 189.595 37.8939 194.607 38.6685L191.728 74.9992C188.825 74.7139 185.817 75.0605 182.907 76.1725C177.795 78.1259 173.993 82.0059 171.989 86.6645L133.551 73.4219C134.013 71.5085 134.287 69.5192 134.335 67.4712C134.692 52.0485 122.479 39.2565 107.056 38.8992C91.6346 38.5419 78.8413 50.7539 78.484 66.1765Z" fill="#FFD7E9" fill-opacity="0.6"/>
 			</svg>
 			<svg class="particles" width="167" height="340" viewBox="0 0 167 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path class="particles_orange__bottom" d="M131.435 139.225C121.392 135.595 110.823 136.474 101.924 140.806L67.8667 82.3219C85.568 71.4112 93.6974 49.1873 86.1627 28.9606C77.588 5.94459 51.9787 -5.76474 28.9614 2.80992C5.94402 11.3846 -5.76396 36.9953 2.80938 60.0126C11.384 83.0299 36.9947 94.7379 60.012 86.1633C60.3653 86.0313 60.7094 85.8832 61.0574 85.7432L71.8801 103.939L71.9187 103.917L95.6734 144.631C89.9867 148.914 85.4334 154.835 82.8347 162.03C77.296 177.362 82.24 193.922 93.9787 203.882L80.4921 221.771L80.5174 221.791L60.528 247.843C56.2693 245.307 51.2573 243.923 45.9347 244.145C31.3467 244.753 20.0134 257.07 20.62 271.658C21.2254 286.247 33.5441 297.581 48.1307 296.975C56.5694 296.623 63.8987 292.342 68.4773 285.983L84.5893 292.667L84.6014 292.639L114.825 305.477C113.435 310.237 113.349 315.434 114.895 320.533C119.129 334.506 133.891 342.401 147.863 338.165C161.837 333.929 169.731 319.169 165.496 305.197C161.26 291.223 146.5 283.329 132.527 287.565C125.409 289.721 119.884 294.615 116.72 300.739L71.1481 281.337C72.7694 277.718 73.624 273.693 73.448 269.462C73.1374 262.031 69.7814 255.457 64.6427 250.863L98.3121 207.051C100.577 208.475 103.021 209.686 105.64 210.631C125.359 217.754 147.119 207.543 154.24 187.825C161.364 168.106 151.153 146.347 131.435 139.225Z" fill="#F9C1A6" fill-opacity="0.6"/>
+				<path class="particles_pink__bottom" d="M131.435 139.225C121.392 135.595 110.823 136.474 101.924 140.806L67.8667 82.3219C85.568 71.4112 93.6974 49.1873 86.1627 28.9606C77.588 5.94459 51.9787 -5.76474 28.9614 2.80992C5.94402 11.3846 -5.76396 36.9953 2.80938 60.0126C11.384 83.0299 36.9947 94.7379 60.012 86.1633C60.3653 86.0313 60.7094 85.8832 61.0574 85.7432L71.8801 103.939L71.9187 103.917L95.6734 144.631C89.9867 148.914 85.4334 154.835 82.8347 162.03C77.296 177.362 82.24 193.922 93.9787 203.882L80.4921 221.771L80.5174 221.791L60.528 247.843C56.2693 245.307 51.2573 243.923 45.9347 244.145C31.3467 244.753 20.0134 257.07 20.62 271.658C21.2254 286.247 33.5441 297.581 48.1307 296.975C56.5694 296.623 63.8987 292.342 68.4773 285.983L84.5893 292.667L84.6014 292.639L114.825 305.477C113.435 310.237 113.349 315.434 114.895 320.533C119.129 334.506 133.891 342.401 147.863 338.165C161.837 333.929 169.731 319.169 165.496 305.197C161.26 291.223 146.5 283.329 132.527 287.565C125.409 289.721 119.884 294.615 116.72 300.739L71.1481 281.337C72.7694 277.718 73.624 273.693 73.448 269.462C73.1374 262.031 69.7814 255.457 64.6427 250.863L98.3121 207.051C100.577 208.475 103.021 209.686 105.64 210.631C125.359 217.754 147.119 207.543 154.24 187.825C161.364 168.106 151.153 146.347 131.435 139.225Z" fill="#FFD7E9" fill-opacity="0.6"/>
 			</svg>
-			<!-- <svg class="bubbles" width="102" height="147" viewBox="0 0 102 147" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M56.2213 56.4427C56.2213 58.896 54.2319 60.8853 51.7786 60.8853C49.3253 60.8853 47.3359 58.896 47.3359 56.4427C47.3359 53.9893 49.3253 52 51.7786 52C54.2319 52 56.2213 53.9893 56.2213 56.4427Z" fill="#FFCF47"/>
-				<path d="M57.5155 80.8118C57.5155 82.4492 56.1875 83.7758 54.5515 83.7758C52.9155 83.7758 51.5889 82.4492 51.5889 80.8118C51.5889 79.1745 52.9155 77.8492 54.5515 77.8492C56.1875 77.8492 57.5155 79.1745 57.5155 80.8118Z" fill="#E69200"/>
-				<path d="M84.0378 91.776C84.0378 96.7053 80.0418 100.701 75.1125 100.701C70.1818 100.701 66.1858 96.7053 66.1858 91.776C66.1858 86.8467 70.1818 82.8507 75.1125 82.8507C80.0418 82.8507 84.0378 86.8467 84.0378 91.776Z" fill="#FFE5AC"/>
-				<path d="M57.1394 115.275C57.1394 120.205 53.1434 124.199 48.214 124.199C43.2834 124.199 39.2874 120.205 39.2874 115.275C39.2874 110.346 43.2834 106.35 48.214 106.35C53.1434 106.35 57.1394 110.346 57.1394 115.275Z" fill="#FFCF47"/>
-				<path d="M56.1862 131.962C54.1902 133.959 50.9528 133.959 48.9555 131.962C46.9595 129.966 46.9595 126.728 48.9555 124.732C50.9528 122.736 54.1902 122.736 56.1862 124.732C58.1822 126.728 58.1822 129.966 56.1862 131.962Z" fill="#E69200"/>
-			</svg>	
-			<img class="virus" src="images/virus.svg" alt="green virus particle">		 -->
-			<object data="images/structure.svg" type="image/svg+xml" id="bg" onload="loaded()"></object>
-			
+			<object class="bg" data="images/structure.svg" type="image/svg+xml" id="bg" onload="loaded()"></object>
 			<section id="home" class="home">
-				<!-- <img src="images/structure.svg" alt="">					 -->
 				<div class="home-heading">
-					<div class="home-heading__box">
-						<h1>Scientific research</h1>
-					</div>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-					</p>
-					<button class="btn"><a href="mailto:scientific@research.com">Send message</a></button>
+					<h1>Scientific <br><b>research</b></h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<button class="btn"><a href="#services">Get started</a></button>
 				</div>
 			</section>
-   			<section id="about">
+   			<section id="about" class="about">
 				<h2>About</h2>
-   				<div class="classes">
-					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere debitis ipsam architecto consequatur quo officia, quasi, fugiat qui nihil nulla nam beatae vel recusandae itaque asperiores totam reiciendis nobis expedita?</p>
+   				<article>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure libero atque, dolorum molestiae quaerat, consequuntur quo voluptate totam obcaecati rem numquam esse repellendus. Atque, natus veniam! Laboriosam provident dolore fuga.</p>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere debitis ipsam architecto consequatur quo officia, quasi, fugiat qui nihil nulla nam beatae vel recusandae itaque asperiores totam reiciendis nobis expedita?
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae iusto modi quae omnis dolorem ullam enim ab sit numquam laudantium natus eius nam dolore adipisci libero, officiis pariatur molestias non!
+					</p>
+				</article>
+			</section>
+			<section id="services" class="services">
+				<h2>Services</h2>
+				<div class="services-row">
+					<div class="services-card">
+						<h3>Microbiology</h3>
+						<p class="services-card__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, at tempore. Tempore quaerat dicta ad inventore ipsum doloremque earum quis. Quia, eum voluptatem distinctio accusantium ducimus quod officia laudantium quidem.</p>
+						<button class="btn services-card__cta">Order now</button>
+					</div>
+					<div class="services-card">
+						<h3>Biochemistry</h3>
+						<p class="services-card__details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi asperiores facilis amet molestiae ducimus ut dolor? Vel nemo dolorem commodi ex rerum accusantium, quos voluptate esse officia aliquam quidem aspernatur?</p>
+						<button class="btn services-card__cta">Order now</button>
+					</div>
+					<div class="services-card">
+						<h3>Genomics</h3>
+						<p class="services-card__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis earum reprehenderit ab perferendis illo ad, inventore, suscipit dolorum quae nulla ipsum molestiae voluptate sequi minima id quam distinctio asperiores quas?</p>
+						<button class="btn services-card__cta">Order now</button>
+					</div>
 				</div>
 			</section>
 			<section class="contact" id="contact">
+				<h2>Get in touch</h2>
 				<div class="contact-box">
-					<a target="_blank" href="https://www.google.pl/maps/place/Gmach+g%C5%82%C3%B3wny+PWr/@51.1080012,17.0590975,17z/data=!4m8!1m2!2m1!1sA1+pwr!3m4!1s0x470fc281d7009f63:0x50a3a2b4d7f63baf!8m2!3d51.1073299!4d17.0617982">
-						<span class="icon-map-marker"></span>
-						Somewhere
+					<a class="contact-link" target="_blank" href="https://www.google.pl/maps/place/Gmach+g%C5%82%C3%B3wny+PWr/@51.1080012,17.0590975,17z/data=!4m8!1m2!2m1!1sA1+pwr!3m4!1s0x470fc281d7009f63:0x50a3a2b4d7f63baf!8m2!3d51.1073299!4d17.0617982">
+						<span class="contact-link__icon icon-map-marker"></span>
+						Somewhere, World
 					</a>
-					<a href="tel:555555555">
-						<span class="icon-mobile"></span>
+					<a class="contact-link" href="tel:555555555">
+						<span class="contact-link__icon icon-mobile"></span>
 						555 555 555
 					</a>
-					<a href="mailto:scientific@research.com">
-						<span class="icon-envelope"></span>
+					<a class="contact-link" href="mailto:scientific@research.com">
+						<span class="contact-link__icon icon-envelope"></span>
 						scientific@research.com
 					</a>
 				</div>
 			</section>
-   			
    			<footer>
-   				<div class="links">
-					<a target="_blank" href="#">nasa</a>
-					<a target="_blank" href="#">smthg</a>
-					<a target="_blank" href="#">xxx</a>
-					<a target="_blank" href="#">archive</a>
+				<div class="footer-box">
+					<p class="footer-box__heading">Follow us</p>
+					<a class="footer-box__link" href="#">Twitter</a>
+					<a class="footer-box__link" href="#">Linkedin</a>
+				</div>
+				<div class="footer-box">
+					<p class="footer-box__heading">Explore</p>
+					<a class="footer-box__link" href="#">Team</a>
+					<a class="footer-box__link" href="#">Technologies</a>
+					<a class="footer-box__link" href="#">Certifications</a>
+				</div>
+				<div class="footer-box">
+					<p class="footer-box__heading">Quick links</p>
+					<a class="footer-box__link" href="#">Careers</a>
+					<a class="footer-box__link" href="#">Privacy Policy</a>
 				</div>	
 			</footer>
 		</main>
 		<script src="js/anime.min.js"></script>
 		<script src="js/homeAnimations.js"></script>
 		<script src="js/menu.js"></script>
-   		<script src="js/projects.js"></script>
    	</body>
 </html>
