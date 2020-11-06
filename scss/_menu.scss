@@ -1,11 +1,10 @@
-@import 'menuButton';
+@import '_menuButton';
 nav{
 	display: block;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 9999;
-	min-height: 50vh;
 }
 .menu-list {
 	display: flex;
@@ -14,12 +13,12 @@ nav{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	height: 100%;
+	height: 100vh;
 	width: 0;
 	text-align: left;
 	overflow: auto;
 	transition: width ease-in .6s;
-	background-color: $secondary;
+	background-color: white;
 	li{
 		margin: 0 1.5em;
 		list-style: none;
@@ -34,25 +33,19 @@ nav{
 			padding: .25em 0;
 			position: relative;
 			font-size: 1.1em;
+			color: $primary;
 			text-transform: uppercase;
 			white-space: nowrap;
 			cursor: pointer;
-		}
-	}
-	.submenu{
-		padding-left: 1em;
-		font-size: .9em;
-		li{
-			margin: 0;
-			&:first-child,&:last-child{
-				margin: 0;
+			&:hover, &:focus{
+				color: $secondary;
 			}
 		}
 	}
 }
 @media(min-width: $lg){
 	nav{
-		right: 0;
+		padding-left: 5em;
 		min-height: unset;
 	}
 	.menu-list{
@@ -63,26 +56,16 @@ nav{
 		background-color: transparent;
 		transition: background-color 200ms linear;
 		li{
-			margin: 1em;
-			&:first-child, &:last-child{
-				margin: 1em;
+			margin: 1em 1em .5em 1em;
+			&:first-child{
+				margin: 1em 1em .5em 0;
+			}
+			&:last-child{
+				margin: 1em 1em .5em 1em;
 			}
 			a{
 				font-weight: normal;
-				&:hover, &:focus{
-					color: $primaryDarker;
-				}
-			}
-		}
-		.has-submenu{
-			.submenu{
-				display: none;
-			}
-			&:hover{
-				.submenu{
-					display: block;
-					background: white;
-				}
+				padding: 0;
 			}
 		}
 	}
@@ -91,11 +74,11 @@ nav{
 	background-color: white;
 	li{
 		margin: .5em 1em;
-		&:first-child, &:last-child{
+		&:first-child{
+			margin: .5em 1em .5em 0;
+		}
+		&:last-child{
 			margin: .5em 1em;
-			a{
-				padding: 0;
-			}
 		}
 	}
 }

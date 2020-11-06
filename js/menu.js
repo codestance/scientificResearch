@@ -2,9 +2,9 @@ let menuButton = document.getElementById('menu-button');
 let menuList = document.getElementById('menu');
 let menuItems = menuList.children;
 menuButton.addEventListener('click',function(){
-	if(menuList.style.width != '100%'){
+	if(menuList.style.width != '100vw'){
 		this.classList.add('menu-button_open');
-		menuList.style.width = '100%';
+		menuList.style.width = '100vw';
 	}else{
 		this.classList.remove('menu-button_open');
 		menuList.style.width = '0';
@@ -20,7 +20,7 @@ if(window.innerWidth<1000){
 	}
 }else{
 	window.onscroll = function(){
-		if(window.scrollY >= 200){
+		if(window.scrollY >= 160){
 			menuList.classList.add('menu-colored');
 		}else{
 			menuList.classList.remove('menu-colored');
