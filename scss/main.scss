@@ -18,7 +18,7 @@ main{
 	}
 	&:nth-child(3){
 		right: 10%;
-		top: 60vh;
+		top: 50vh;
 	}
 }
 .bg{
@@ -27,6 +27,9 @@ main{
 	top: 0;
 	right: 0;
 	z-index: -1;
+	@media(min-width: $xl){
+		width: 90%;
+	}
 }
 .home {
 	height: 100vh;
